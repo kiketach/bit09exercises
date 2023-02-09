@@ -1,23 +1,27 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { About } from "./Components/About";
 import { Products } from "./Components/Products";
+import { Homepage } from "./Components/Homepage";
 
 function App() {
   return (
     <>
       <h1>Ejercicios con REACT</h1>
+      <hr />
 
       <BrowserRouter>
-          <nav>
-            <Link to = '/'>Inicio</Link>
-            <Link to = '/Nosotros'>Nosotros</Link>
-            <Link to = '/Productos'>Productos</Link>
-          </nav>
-          <Routes>
-            <Route path="/Nosotros" element={<About />}></Route>
-            <Route path="/Productos" element={<Products />}></Route>
-          </Routes>
+        <nav>
+          <Link to="/homepage">Inicio</Link>
+          <Link to="/Nosotros">Nosotros</Link>
+          <Link to="/Productos">Productos</Link>
+        </nav>
+        <Routes>
+          <Route path="/homepage" element={<Homepage />}></Route>
+          <Route path="/Nosotros" element={<About />}></Route>
+          <Route path="/Productos" element={<Products />}></Route>
+        </Routes>
       </BrowserRouter>
     </>
   );

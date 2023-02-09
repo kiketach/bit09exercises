@@ -3,6 +3,9 @@ import React from 'react'
 
 export const About = () => {
   return (
-    <div>Sobre Nosotros</div>
+    <>
+    <h2>Sobre Nosotros</h2>
+    <p>Somos fabricantes de zapatillas para jugadores exigentes de micro, futsal y cesped.</p>
+    </>
   )
 }

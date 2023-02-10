@@ -1,28 +1,34 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { About } from "./Components/About";
-import { Products } from "./Components/Products";
+import { Exercises } from "./Components/Exercises";
 import { Homepage } from "./Components/Homepage";
 
 function App() {
   return (
     <>
-      <h1>Ejercicios con REACT</h1>
-      <hr />
+      <div className="container text-center">
+        <h1>Ejercicios con REACT</h1>
+        <hr />
+      </div>
 
-      <BrowserRouter>
-        <nav>
-          <Link to="/homepage">Inicio</Link>
-          <Link to="/Nosotros">Nosotros</Link>
-          <Link to="/Productos">Productos</Link>
-        </nav>
-        <Routes>
-          <Route path="/homepage" element={<Homepage />}></Route>
-          <Route path="/Nosotros" element={<About />}></Route>
-          <Route path="/Productos" element={<Products />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <div className="container">
+        <BrowserRouter>
+          <nav className="py-4 text-center">
+            <Link className="px-2" to="/homepage">
+              Inicio
+            </Link>
+            <Link className="px-2" to="/Exercises">
+              Ejercicios
+            </Link>
+          </nav>
+          <hr />
+          <Routes>
+            <Route path="/homepage" element={<Homepage />}></Route>
+            <Route path="/Exercises" element={<Exercises />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   );
 }

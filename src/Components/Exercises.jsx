@@ -1,17 +1,22 @@
 import { useState } from "react";
 import { Exercise1 } from "./Exercise1";
 import { Exercise2 } from "./Exercise2";
+import { Exercise3 } from "./Exercise3";
 
 export const Exercises = () => {
   const [exercise, setexercise] = useState(null);
 
   return (
       <section>
-        <h1 className="text-center">Ejercicios</h1>
-        <ol>
-          <li onClick={()=> setexercise (<Exercise1 />) }>Ejercicio 1</li>
-          <li onClick={()=> setexercise (<Exercise2 />) }>Ejercicio 2</li>
-        </ol>
+        <div className="container">
+          <button className="btn btn-primary btn-lg" onClick={()=> setexercise (<Exercise1 />) }>Counter</button></div> <br />
+          <div className="container">
+          <button className="btn btn-primary btn-lg" onClick={()=> setexercise (<Exercise2 />) }>Calling a API</button> 
+        </div> <br />
+        <div className="container">
+          <button className="btn btn-primary btn-lg" onClick={()=> setexercise (<Exercise3 />) }>Telephone Directory</button>
+        </div>
+
         <div> {exercise} </div>
       </section>
   

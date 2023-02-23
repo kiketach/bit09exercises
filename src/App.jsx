@@ -8,18 +8,18 @@ function App() {
   return (
     <>
       <div className="container text-center">
-        <h1>Ejercicios con REACT</h1>
+        <h1>Exercices with REACT</h1>
         <hr />
       </div>
 
       <div className="container">
         <BrowserRouter>
           <nav className="py-4 text-center">
-            <Link className="px-2" to="/homepage">
-              Inicio
+            <Link className="px-3" to="/homepage">
+              Home
             </Link>
-            <Link className="px-2" to="/Exercises">
-              Ejercicios
+            <Link className="px-3" to="/Exercises">
+              Exercises
             </Link>
           </nav>
           <hr />
